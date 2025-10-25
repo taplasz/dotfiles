@@ -25,20 +25,4 @@ fi
 unset rc
 . "$HOME/.cargo/env"
 
-# export HELIX_RUNTIME=/home/tp/softwares/helix/runtime/
 export EDITOR=emacs
-
-# alias r="wezterm cli split-pane --right --percent 40 R; wezterm cli activate-pane-direction Left; hx ."
-# alias r="zellij --layout ~/.config/zellij/layouts/r.kdl"
-
-function y() {
-  local tmp="$(mktemp -t "yazi-cwd.XXXXXX")" cwd
-  yazi "$@" --cwd-file="$tmp"
-  IFS= read -r -d '' cwd <"$tmp"
-  [ -n "$cwd" ] && [ "$cwd" != "$PWD" ] && builtin cd -- "$cwd"
-  rm -f -- "$tmp"
-}
-
-eval "$(zoxide init bash)"
-
-# eval "$(zellij setup --generate-auto-start bash)"

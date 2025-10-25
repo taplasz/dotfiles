@@ -57,4 +57,3 @@
 ;;   :recipe (:host codeberg :repo "teoten/esr"
 ;;            :branch "main" :type git
 ;;            :files ("esr.el" "esr-roxygen.el")))
-(package! modus-themes)
