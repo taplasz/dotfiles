@@ -26,3 +26,5 @@ unset rc
 . "$HOME/.cargo/env"
 
 export EDITOR=emacs
+
+eval "$(zoxide init bash)"

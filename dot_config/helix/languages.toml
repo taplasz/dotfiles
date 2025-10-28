@@ -1,0 +1,18 @@
+[language-server.scls]
+command = "simple-completion-langauge-server"
+
+[language-server.scls.config]
+feature_snippets = true
+snippets_first = true
+
+[[language]]
+name = "r"
+language-servers = ["scls", "air", "r"]
+
+[[language]]
+name = "rust"
+language-servers = ["scls", "rust-analyzer"]
+
+[[language]]
+name = "python"
+language-servers = ["scls", "ruff", "basedpyright"]

@@ -1,0 +1,47 @@
+theme = "onelight"
+
+[editor]
+line-number = "relative"
+mouse = false
+middle-click-paste = false
+color-modes = true
+rainbow-brackets = true
+
+[editor.cursor-shape]
+insert = "bar"
+normal = "block"
+select = "underline"
+
+[keys.normal."space".m]
+"," = [
+  ":sh zellij action move-focus right",
+  ":pipe-to zellij action write-chars '%{selection}\n'",
+  ":sh zellij action move-focus left",
+  "collapse_selection"
+]
+
+"h" = ":sh zellij action resize decrease right"
+
+"l" = ":sh zellij action resize increase right"
+  
+# "y" = [
+#   ':sh rm -f /tmp/files2open',
+#   ':insert-output yazi "%{buffer_name}" --chooser-file=/tmp/files2open',
+#   ':redraw',
+#   ':open /tmp/files2open',
+#   'select_all',
+#   'split_selection_on_newline',
+#   'goto_file',
+#   ':buffer-close! /tmp/files2open',
+# ]
+
+# "," = [
+#   ":pipe-to wezterm cli send-text --no-paste --pane-id 1 '%{selection}\n'",
+#   "collapse_selection"
+# ]
+# "," = [
+#   ":pipe-to wezterm cli send-text --no-paste --pane-id $(wezterm cli list | awk '$6==\"R\"{print $3}') '%{selection}\n'"
+# ]
+# "h" = ":sh wezterm cli adjust-pane-size --pane-id $(wezterm cli list | awk '$6==\"R\"{print $3}') --amount 10 Left"
+# "l" = ":sh wezterm cli adjust-pane-size --pane-id $(wezterm cli list | awk '$6==\"R\"{print $3}') --amount 10 Right"
+
