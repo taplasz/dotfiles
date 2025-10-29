@@ -23,8 +23,9 @@ if [ -d ~/.bashrc.d ]; then
   done
 fi
 unset rc
+
 . "$HOME/.cargo/env"
 
 export EDITOR=emacs
 
-eval "$(zoxide init bash)"
+export PATH="$PATH:~/.config/emacs/bin"
