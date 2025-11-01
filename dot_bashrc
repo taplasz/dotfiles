@@ -24,8 +24,6 @@ if [ -d ~/.bashrc.d ]; then
 fi
 unset rc
 
+export EDITOR="emacs"
+export PATH="$PATH:$HOME/.config/emacs/bin"
 . "$HOME/.cargo/env"
-
-export EDITOR=emacs
-
-export PATH="$PATH:~/.config/emacs/bin"
